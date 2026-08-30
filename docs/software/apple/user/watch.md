@@ -17,7 +17,7 @@ Node data is pushed to the Watch automatically whenever the iPhone app is in ran
 | Apple Watch | watchOS paired with iPhone |
 | iPhone app | Meshtastic iPhone app open and connected to a radio |
 | Location | Watch Location Services enabled for direction-finding |
-| Proximity | Watch and iPhone within normal Bluetooth/WiFi range of each other |
+| Proximity | Watch and iPhone within normal Bluetooth/Wi-Fi range of each other |
 
 ## Tabs
 
@@ -31,9 +31,9 @@ Each row shows:
 
 | Element | Meaning |
 |---------|---------|
-| Coloured circle | Node short name, colour derived from node number |
+| Colored circle | Node short name, color derived from node number |
 | Name | Node long name |
-| Distance | Distance from your current location, colour-coded by proximity |
+| Distance | Distance from your current location, color-coded by proximity |
 | Arrow | Mini bearing arrow pointing toward the node, rotates with your heading |
 
 Tap any row to open the **Foxhunt Compass** for that node.
@@ -46,14 +46,14 @@ The compass points toward the selected node using your Watch's heading sensor. I
 |---------|---------|
 | Rotating dial | Cardinal directions (N/NE/E…) rotate with your physical heading |
 | Orange triangle | Fixed north indicator at the top of the ring |
-| Coloured arrow | Bearing arrow pointing toward the target node |
+| Colored arrow | Bearing arrow pointing toward the target node |
 | Direction cone | Translucent wedge highlighting the target direction |
-| Centre circle | Current heading in degrees, bearing to target, and distance |
+| Center circle | Current heading in degrees, bearing to target, and distance |
 | Node circle | Short name badge of the target node |
 
-**Distance colour coding:**
+**Distance color coding:**
 
-| Colour | Distance |
+| Color | Distance |
 |--------|----------|
 | Red | Far (> ⅔ of ½ mile) |
 | Yellow | Mid-range (⅓ – ⅔ of ½ mile) |
@@ -75,3 +75,25 @@ Tap **Refresh** to request an updated node list from the iPhone app. If the phon
 ## Setting Foxhunt Targets
 
 From the iPhone app, mark a node as a foxhunt target from its detail view. Marked nodes are pushed to the Watch and pinned at the top of the Foxhunt list regardless of distance — useful when you know which node you are hunting before you are within ½ mile range.
+
+## Notifications
+
+The Watch app does not create notifications. Every Meshtastic alert on your wrist is a notification from the **iPhone** app that watchOS mirrored across, so it arrives whether or not the Watch app is running.
+
+**Removing the Watch app does not stop them.** Mirroring is a function of the pairing rather than of the Watch app, so deleting Meshtastic from the Watch leaves the alerts exactly as they were. Installing or removing the Watch app and silencing Watch alerts are two separate decisions.
+
+### Silence Meshtastic on the Watch only
+
+On your iPhone, open the **Watch** app → **My Watch** → **Notifications** → **Meshtastic** → **Custom**:
+
+| Option | Effect |
+|--------|--------|
+| Allow Notifications | Alerts appear on the Watch |
+| Send to Notification Center | Delivered silently — no haptic, no screen wake |
+| Notifications Off | No Meshtastic alerts on the Watch at all |
+
+Your iPhone keeps alerting normally under all three.
+
+### Silence a category on both devices
+
+To stop a *kind* of alert everywhere, use **Settings → Meshtastic → Notifications** on the iPhone. Turning a category off there stops the notification being created at all, so nothing reaches the Watch either.
